@@ -46,33 +46,56 @@ var Class = (function(){
   return Class;
 })()
 
-//扩展类编写代码
-var TextCount = Class.extend({
+//抽象出来Base
+var Base = Class.extend({
   init: function(config){
-    this.input = $(config.id);
-    this._bind();
+    //保存配置项
+    this._config = config;
+    this.bind();
     this.render();
+  },
+  //使用get获取配置项
+  get: function(key){
+    return this._config[key];
+  },
+  //使用set来设置配置项
+  set: function(key,value){
+    this._config[key] = value;
+  },
+  bind: function(){
+
+  },
+  render: function(){
+
+  },
+  //定义销毁方法，收尾工作在这处理
+  destroy: function(){
+
+  }
+})
+
+//编写实际业务
+var TextCount = Base.extend({
+  _getNum: function(){
+    return this.get('input').val().length;
+  },
+  bind: function(){
+    var self = this;
+    self.get('input').on('keyup',function(){
+      self.render();
+    });
   },
   render: function(){
     var num = this._getNum();
     if($('#J_input_count').length == 0){
-      this.input.after('<span id="J_input_count"></span>');
+      this.get('input').after('<span id="J_input_count"></span>');
     };
     $('#J_input_count').html(num+'个字');
-  },
-  _getNum: function(){
-    return this.input.val().length;
-  },
-  _bind: function(){
-    var self = this;
-    self.input.on('keyup', function(){
-      self.render();
-    });
   }
-})
-//执行
+});
+
 $(function(){
   new TextCount({
-    id: "#J_input"
-  });
-})
+    input: $('#J_input')
+  })
+});
