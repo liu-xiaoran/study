@@ -6,20 +6,34 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>React</title>
   <script src="./jquery-3.3.1.js"></script>
-  <script src="./react1.js"></script>
+  <script src="./react2.js"></script>
 </head>
 <body>
   <div id="container"></div>
 </body>
 </html>
 <script type="text/javascript">
+  // react1
+  // function hello(){
+  //   alert('Hello World')
+  // };
+  // var ele = React.createElement('div',{id:'test',onclick: hello},'click me');
+  // React.render(ele,document.getElementById('container'));
 
-  function hello(){
-    alert('Hello World')
-  };
-
-  var ele = React.createElement('div',{id:'test',onclick: hello},'click me');
-
-  React.render(ele,document.getElementById('container'));
+  //react2
+  var HelloMessage = React.createClass({
+    getInitialState: function(){
+      return {type: 'say:'};
+    },
+    componentWillMount: function(){
+      console.log('我就要开始渲染了。。。');
+    },
+    commentsDidMount: function(){
+      console.log('我已经渲染好了。。。');
+    },
+    render: function(){
+      return React.createElement()
+    }
+  })
 
 </script>
