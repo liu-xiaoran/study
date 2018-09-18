@@ -1,6 +1,5 @@
 from confluent_kafka import Consumer, KafkaError
 
-
 c = Consumer({
     'bootstrap.servers': 'localhost:9092',
     'group.id': 'mygroup',
