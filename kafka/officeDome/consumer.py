@@ -25,4 +25,3 @@ while True:
     print('Received message: {}'.format(msg.value().decode('utf-8')))
 
 c.close()
-
