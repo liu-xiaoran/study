@@ -1,5 +1,5 @@
-import sys 
-sys.setdefaultencoding('utf-8')
+#coding=utf-8
+
 from confluent_kafka import Consumer, KafkaError
 
 c = Consumer({
