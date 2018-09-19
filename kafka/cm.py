@@ -6,7 +6,7 @@ c = Consumer({
     "bootstrap.servers": "localhost:9092",
     "group.id": "group",
     'default.topic.config': {
-        'auto.offset.reset': 'smallest'
+        'auto.offset.reset': 'largest'
     }
 })
 
