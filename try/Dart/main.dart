@@ -14,6 +14,8 @@ void main()
     var str3 = '''Dart Lang
     Hello,World''';
 
+    str1 = str1 + str2 + str3;
+
     var name = 'Wang Wang';
     assert(name == "Wang Wang");
 
