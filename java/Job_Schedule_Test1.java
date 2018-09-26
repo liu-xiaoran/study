@@ -16,6 +16,7 @@ class JobThread extends Thread {
             System.out.println("Test: " + Calendar.getInstance().getTime());
 
             try {
+                // sleep方法不会释放锁
                 Thread.sleep(1000);
             } catch (Exception e) {
             }
