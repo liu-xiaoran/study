@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" name="test" value="0" />0 
+    <input type="checkbox" name="test" value="1" />1 
+    <input type="checkbox" name="test" value="2" />2 
+    <input type="checkbox" name="test" value="3" />3 
+    <input type="checkbox" name="test" value="4" />4 
+    <input type="checkbox" name="test" value="5" />5 
+    <input type="checkbox" name="test" value="6" />6 
+    <input type="checkbox" name="test" value="7" />7 
+    <input type="button" onclick="jqchk()" value="提 交" /> 
+</body>
+<script>
+    function jqchk(){ //jquery获取复选框值 
+    var chk_value =[]; 
+    $('input[name="test"]:checked').each(function(){ 
+        chk_value.push($(this).val()); 
+    }); 
+    alert(chk_value.length==0 ?'你还没有选择任何内容！':chk_value); 
+} 
+</script>
+</html>
