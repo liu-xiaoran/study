@@ -25,4 +25,8 @@ hs_err_pid*
 *.iml
 .idea
 .vscode
+.DS_Store
 out/
+META-INF/
+logs/
+*.properties
