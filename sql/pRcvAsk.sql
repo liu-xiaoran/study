@@ -114,7 +114,7 @@ BEGIN
     RETURN (-1)
   END
 
-  -- 删除中间表中的数据，只清除 BillType 为 0 的数据？？？
+  -- 删除中间表中的数据，只清除 BillType 为 0 的 配送中心要货数据
   DELETE A
   FROM tDRPInfOrdYhAndThBody A, tDRPInfOrdYhAndThHead B
   WHERE A.BillNo = B.BillNo AND A.BillType = B.BillType AND A.YhOrgCode = B.YhOrgCode AND B.BillType = '0' AND B.XsOrgCode = @sOrgCode
