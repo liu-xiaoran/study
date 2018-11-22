@@ -5,7 +5,6 @@ ALTER PROCEDURE pRcvAsk
   @sMsg VARCHAR(200) OUT
 )
 AS
-    -- 声明
   DECLARE @SerialNo INT
   DECLARE @sDate VARCHAR(10)
   DECLARE @sOrgCode VARCHAR(6)
