@@ -57,10 +57,11 @@ while (count<=1):
                     "Remark": "备注 我是测试数据"
                 }
 
-    YHC = "YHC"+str(27001201811050001 + count)
+    YHC = "YHC2700111"+str(int(time.time())+count)
+    
     YhOrgCode = str(random.randint(1000,5500))
     jsonData["head"]["BillNo"] = YHC
-    jsonData["head"]["YhOrgCode"] = YhOrgCode
+    jsonData["head"]["YhOrgCode"] = "0006"
     jsonData["head"]["JzDate"] = time.strftime("%Y-%m-%d", time.localtime())
     bodyListNum = random.randint(6,20)
     PluCodeList = ["00000049","60023299","60023317","00000000010","00000001","00000005","00000015","70073256","90036628","60023318","10065681","00000026","00001610","00009440","10017996","10012213","27001000046","00000019","00000021","00000028","00000057"]
