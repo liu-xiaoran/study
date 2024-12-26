@@ -30,3 +30,4 @@ out/
 META-INF/
 logs/
 *.properties
+target/
